@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Sorting Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        line-height: 1.6;
+      }
+      code {
+        background: #f4f4f4;
+        padding: 2px 4px;
+        border-radius: 4px;
+      }
+      pre {
+        background: #f9f9f9;
+        padding: 16px;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sort an Array in JavaScript</h1>
+    <p>
+      This example sorts an array of numbers in ascending order using
+      <code>Array.prototype.sort</code> with a numeric comparator.
+    </p>
+
+    <pre><code>const numbers = [5, 2, 9, 1, 7];
+const sortedNumbers = [...numbers].sort((a, b) =&gt; a - b);
+
+console.log(sortedNumbers); // [1, 2, 5, 7, 9]</code></pre>
+
+    <h2>Live Output</h2>
+    <p>Original array: <span id="original"></span></p>
+    <p>Sorted array: <span id="sorted"></span></p>
+
+    <script>
+      const numbers = [5, 2, 9, 1, 7];
+      const sortedNumbers = [...numbers].sort((a, b) => a - b);
+
+      document.getElementById("original").textContent = JSON.stringify(numbers);
+      document.getElementById("sorted").textContent = JSON.stringify(sortedNumbers);
+    </script>
+  </body>
+</html>
